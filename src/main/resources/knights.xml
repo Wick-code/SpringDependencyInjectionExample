@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="PoeticDuke" class="com.example.impl.PoeticJuggler">
+        <constructor-arg type="int" value="14"></constructor-arg>
+        <constructor-arg ref="poem"></constructor-arg>
+    </bean>
+
+    <bean id="poem" class="com.example.impl.BlackShip"></bean>
+
+    <bean id="stage" class="com.example.impl.Stage" factory-method="getInstance">
+    </bean>
+
+</beans>
